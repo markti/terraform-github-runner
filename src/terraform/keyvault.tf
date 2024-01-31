@@ -17,7 +17,7 @@ resource "azurerm_role_assignment" "terraform_keyvault_access" {
 
 resource "azurerm_role_assignment" "github_runner_keyvault_access" {
   scope                = azurerm_key_vault.main.id
-  role_definition_name = "Key Vault Administrator"
+  role_definition_name = "Key Vault Secrets User"
   principal_id         = azurerm_user_assigned_identity.github_runner.principal_id
 }
 
