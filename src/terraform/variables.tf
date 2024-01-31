@@ -7,3 +7,6 @@ variable "environment_name" {
 variable "primary_region" {
   type = string
 }
+variable "github_token" {
+  type = string
+}
