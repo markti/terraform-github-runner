@@ -20,3 +20,5 @@ provider "azurerm" {
     }
   }
 }
+provider "azapi" {
+}
