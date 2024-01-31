@@ -94,7 +94,7 @@ resource "azapi_resource" "github_runner" {
         secrets = [
           {
             keyVaultUrl = "${azurerm_key_vault.main.vault_uri}secrets/${azurerm_key_vault_secret.github_token.name}"
-            identity    = azurerm_user_assigned_identity.github_runner.principal_id
+            identity    = azurerm_user_assigned_identity.github_runner.id
             name        = "personal-access-token"
           }
         ]
