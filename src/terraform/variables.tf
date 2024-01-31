@@ -13,3 +13,12 @@ variable "github_token" {
 variable "address_space" {
   type = string
 }
+variable "github_owner" {
+  type = string
+}
+variable "github_repo" {
+  type = string
+}
+variable "container_name" {
+  type = string
+}

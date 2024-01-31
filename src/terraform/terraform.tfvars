@@ -1,2 +1,5 @@
 primary_region = "westus3"
 address_space  = "10.16.0.0/22"
+github_owner   = "markti"
+github_repo    = "terraform-hashitalks-2024"
+container_name = "github-runner"
