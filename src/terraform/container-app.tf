@@ -74,15 +74,13 @@ resource "azapi_resource" "github_runner" {
           parallelism = int
           replicaCompletionCount = int
         }
+        */
         registries = [
           {
-            identity          = "string"
-            passwordSecretRef = "string"
-            server            = "string"
-            username          = "string"
+            identity          = azurerm_user_assigned_identity.github_runner.id
+            server            = "${azurerm_container_registry.main.name}.azurecr.io"
           }
         ]
-        */
         replicaRetryLimit = 0
         replicaTimeout    = 1800
         /*
