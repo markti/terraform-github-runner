@@ -10,3 +10,6 @@ variable "primary_region" {
 variable "github_token" {
   type = string
 }
+variable "address_space" {
+  type = string
+}
