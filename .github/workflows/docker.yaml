@@ -60,6 +60,9 @@ jobs:
   docker:
     needs: [terraform]
     runs-on: ubuntu-latest
+
+    environment:
+      name: ${{ github.event.inputs.environment }}
     
     steps:
     - id: image-version
