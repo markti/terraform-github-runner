@@ -17,8 +17,6 @@ resource "azurerm_user_assigned_identity" "github_runner" {
 
 resource "azapi_resource" "github_runner" {
 
-  count = 0
-
   type      = "Microsoft.App/jobs@2023-05-01"
   name      = "caej-${var.application_name}-${var.environment_name}-${random_string.main.result}"
   location  = azurerm_resource_group.main.location
