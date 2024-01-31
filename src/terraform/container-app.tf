@@ -57,7 +57,7 @@ resource "azapi_resource" "github_runner" {
                   }
                 ]
                 metadata = {
-                  githubAPIURL              = "https://api.github.com"
+                  github-runner             = "https://api.github.com"
                   owner                     = var.github_owner
                   runnerScope               = "repo"
                   repos                     = var.github_repo
