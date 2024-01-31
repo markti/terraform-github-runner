@@ -146,7 +146,7 @@ resource "azapi_resource" "github_runner" {
             ]
             */
             resources = {
-              cpu    = "2.0"
+              cpu    = 2
               memory = "4Gi"
             }
             /*
