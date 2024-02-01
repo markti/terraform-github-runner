@@ -1,4 +1,4 @@
-FROM ghcr.io/actions/actions-runner:2.304.0
+FROM ghcr.io/actions/actions-runner:2.312.0
 # for latest release, see https://github.com/actions/runner/releases
 
 USER root
