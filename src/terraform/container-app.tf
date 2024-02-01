@@ -77,8 +77,8 @@ resource "azapi_resource" "github_runner" {
         */
         registries = [
           {
-            identity          = azurerm_user_assigned_identity.github_runner.id
-            server            = "${azurerm_container_registry.main.name}.azurecr.io"
+            identity = azurerm_user_assigned_identity.github_runner.id
+            server   = "${azurerm_container_registry.main.name}.azurecr.io"
           }
         ]
         replicaRetryLimit = 0
@@ -123,7 +123,7 @@ resource "azapi_resource" "github_runner" {
                 value = "https://api.github.com/repos/${var.github_owner}/${var.github_repo}/actions/runners/registration-token"
               }
             ]
-            image = "${azurerm_container_registry.main.name}.azurecr.io/${var.container_name}:latest"
+            image = "${azurerm_container_registry.main.name}.azurecr.io/${var.container_name}:${var.container_version}"
             name  = "gh-${var.application_name}-${var.environment_name}-${random_string.main.result}"
             /*
             probes = [

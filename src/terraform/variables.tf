@@ -22,3 +22,6 @@ variable "github_repo" {
 variable "container_name" {
   type = string
 }
+variable "container_version" {
+  type = string
+}
