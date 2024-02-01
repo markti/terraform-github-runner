@@ -70,6 +70,10 @@ jobs:
       run: |
         echo "version=$(date +'%Y.%m').${{ github.run_number }}" >> "$GITHUB_OUTPUT"
 
+    - name: Show Registry
+      run: |
+        echo "ACR:${{ needs.terraform.outputs.registry_endpoint }}"
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
