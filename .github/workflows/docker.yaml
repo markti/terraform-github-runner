@@ -65,6 +65,9 @@ jobs:
       name: ${{ github.event.inputs.environment }}
     
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
     - id: image-version
       name: Generate Version Number
       run: |
